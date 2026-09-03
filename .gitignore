@@ -1,0 +1,5 @@
+node_modules/
+.opencode/
+.impeccable/
+.DS_Store
+Thumbs.db

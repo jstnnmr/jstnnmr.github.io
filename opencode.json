@@ -1,0 +1,24 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "AGENTS.md",
+    ".opencode/rules/impeccable.md"
+  ],
+  "skills": {
+    "paths": [".opencode/skills"]
+  },
+  "command": {
+    "audit": {
+      "description": "Impeccable technical quality audit: a11y, performance, responsive, scored report",
+      "template": "Run the Impeccable audit workflow on $ARGUMENTS (or the current UI if no target). Apply the design rules in @.opencode/rules/impeccable.md and follow the playbook in @.opencode/skills/impeccable/reference/audit.md. Run the detector checks (contrast, a11y, performance, responsive, anti-patterns), then produce the scored report with P0-P3 severity ratings and an actionable plan. Do not edit files unless the user asks."
+    },
+    "polish": {
+      "description": "Impeccable final polish pass: typography, transitions, micro-interactions, visual balance",
+      "template": "Run the Impeccable polish workflow on $ARGUMENTS (or the current UI if no target). Apply the design rules in @.opencode/rules/impeccable.md and follow the playbook in @.opencode/skills/impeccable/reference/polish.md. Establish the system, gather evidence, triage, then polish flow/hierarchy, layout/type, color/imagery, interaction/state, content/code, and verify before finishing. Keep edits tight and on-system."
+    },
+    "teach": {
+      "description": "Explain UI/UX decisions with formal Impeccable design rationale (never edits)",
+      "template": "Run the Impeccable teach workflow on $ARGUMENTS (or the current UI if no target). Apply the design rules in @.opencode/rules/impeccable.md and follow the playbook in @.opencode/skills/impeccable/reference/teach.md. Produce a structured design rationale: decision summary, hierarchy map, rhythm and spacing, typography rationale, color rationale, motion and interaction, then a verdict covering what works, craft-floor violations, and a suggested next command. Do not edit files."
+    }
+  }
+}

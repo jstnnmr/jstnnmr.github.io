@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio — developer, designer, builder." />
+  <title>Portfolio</title>
+  <link rel="icon" type="image/jpeg" href="img/me.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<!--
+THESIS: A flight-deck personnel ID anchors the left column while a single instrument strip scrolls on the right; refuses the sticky-nav / centered-hero / stacked-section template.
+OWN-WORLD: Warm paper instrument ground, charcoal hairlines, one amber readout accent; corner brackets, crosshair markers, mono instrument labels, tracking rules. An aerospace HUD, light from the flight-deck scene.
+STORY: A visitor lands on a personnel ID (who I am, how to reach me), then reads the record — bio, work history, projects, skills, tools, stack.
+FIRST VIEWPORT: Fixed left card at 400px: issuing line, status lamp, photo in a traced ring, name, role, tagline, ID code, key facts, links, barcode. Right panel scrolls, sections keyed by amber leading rules.
+FORM: brief-pinned aerospace HUD (direction chosen with the user via structured probe).
+FINISH: "unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance"
+-->
+  <nav class="nav" aria-label="Primary">
+    <a href="#about" class="nav-brand" data-nav="top">JM<span class="brand-tick" aria-hidden="true"></span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about" data-nav="about">About</a>
+      <a href="#experience" data-nav="experience">Work</a>
+      <a href="#projects" data-nav="projects">Projects</a>
+      <a href="#skills" data-nav="skills">Skills</a>
+      <a href="#tools" data-nav="tools">Tools</a>
+      <a href="#stack" data-nav="stack">Stack</a>
+    </div>
+  </nav>
+
+  <div class="shell">
+
+    <!-- ============ LEFT: PERSONNEL ID CARD ============ -->
+    <aside class="sidebar" aria-label="Profile identity card">
+      <div class="id-card">
+
+        <div class="card-top">
+          <span class="issuer">Personnel ID</span>
+          <span class="status"><span class="lamp" aria-hidden="true"></span>Online</span>
+        </div>
+
+        <div class="card-photo" id="cardPhoto">
+          <span id="cardInitial" aria-hidden="true"></span>
+        </div>
+
+        <h1 class="card-name" id="cardName">—</h1>
+        <p class="card-role" id="cardRole">—</p>
+        <p class="card-tagline" id="cardTagline"></p>
+
+        <div class="card-readout">
+          <span class="readout-cell"><span class="k">ID</span> <span class="v" id="cardIdNumber">—</span></span>
+          <span class="readout-dot" aria-hidden="true"></span>
+          <span class="readout-cell"><span class="k">LVL</span> <span class="v" id="cardLevel">03</span></span>
+        </div>
+
+        <dl class="card-facts" id="cardFacts"></dl>
+
+        <ul class="card-links" id="cardLinks"></ul>
+
+        <div class="card-barcode" id="cardBarcode" aria-hidden="true"></div>
+
+      </div>
+
+      <footer class="sidebar-foot">
+        <span class="clock" id="clock">--:--:--</span>
+        <span class="readout-dot" aria-hidden="true"></span>
+        <span class="zone" id="zone">TZ // LOCAL</span>
+      </footer>
+    </aside>
+
+    <!-- ============ RIGHT: SCROLLING RECORD ============ -->
+    <main class="content">
+
+      <section id="about" class="panel">
+        <h2 class="panel-title">About</h2>
+        <p class="about-bio" id="aboutBio"></p>
+      </section>
+
+      <section id="experience" class="panel">
+        <h2 class="panel-title">Work History</h2>
+        <div class="timeline" id="experienceList"></div>
+      </section>
+
+      <section id="projects" class="panel">
+        <h2 class="panel-title">Personal Projects</h2>
+        <div class="projects-grid" id="projectsList"></div>
+      </section>
+
+      <section id="skills" class="panel">
+        <h2 class="panel-title">Skills</h2>
+        <div class="chip-grid" id="skillsList"></div>
+      </section>
+
+      <section id="tools" class="panel">
+        <h2 class="panel-title">Tools</h2>
+        <div class="chip-grid" id="toolsList"></div>
+      </section>
+
+      <section id="stack" class="panel">
+        <h2 class="panel-title">Stack</h2>
+        <div class="stack" id="stackList"></div>
+      </section>
+
+      <footer class="content-foot">
+        <p>&copy; <span id="year"></span> <span id="footerName">—</span> &middot; Built with HTML, CSS &amp; vanilla JS</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <div class="overlay" id="projectOverlay" hidden>
+    <div class="overlay-panel" role="dialog" aria-modal="true" aria-label="Project details">
+      <button class="overlay-close" id="overlayClose" aria-label="Close project details">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+      </button>
+      <div class="overlay-gallery" id="overlayGallery"></div>
+      <h3 class="overlay-title" id="overlayTitle"></h3>
+      <div class="overlay-tech" id="overlayTech"></div>
+      <p class="overlay-desc" id="overlayDesc"></p>
+      <div class="overlay-actions" id="overlayActions"></div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
