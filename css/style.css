@@ -481,6 +481,7 @@ a {
   overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: var(--amber) transparent;
+  padding-bottom: 6rem;
 }
 
 .content::-webkit-scrollbar {

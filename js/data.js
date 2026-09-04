@@ -12,12 +12,11 @@ const portfolioData = {
     Magna Cum Laude graduate, Pasig City Scholar, and a working student. I offer my hard work, dedication, and a commitment to excellence in every project I undertake.`,
   resumeUrl: "img/NAMOC-CV.pdf",                              // link to your resume PDF
   photoInitial: "JM",                           // letter shown while no photo is set
+  cardLevel: "Fresh Grad",                  // displayed next to LVL on the ID card
   photoSrc: "img/me.jpg",                                // e.g. "img/me.jpg" — keep "" to use the initial
 
-  /* Quick facts shown on the ID card (label: value). Email is drawn
-     from `contact.email` below, so skip it here. */
   facts: [
-    { label: "Location", value: "Pasig City, Country" },
+    { label: "Location", value: "Pasig City, PH" },
     { label: "Education", value: "BSIT" },
   ],
 
@@ -46,12 +45,7 @@ const portfolioData = {
     },
   ],
 
-  /* ---------- PERSONAL PROJECTS ----------
-     Per project you can add:
-       longDescription  — longer write-up shown in the enlarged detail view
-       images           — array of photo paths, e.g. ["img/project-one-1.jpg", "img/project-one-2.jpg"]
-       download         — { label, url } for a downloadable file (PDF, ZIP, case study…)
-     Every field except `title` and `description` is optional. */
+  /* ---------- PROJECTS ---------- */
   projects: [
     {
       title: "EaseTask",
@@ -101,7 +95,7 @@ const portfolioData = {
       title: "Web-Based Salon Management System",
       description: "Scheduling system for salons with a focus on visual harmony and usability.",
       longDescription: "Assisted in developing a scheduling system, focusing on visual harmony, usability, and consistent UI design using Figma.",
-      tech: ["Figma", "UI/UX"],
+      tech: ["PHP", "HTML", "JavaScript", "Figma", "UI/UX"],
       link: "https://www.figma.com/proto/sfVGWbfjeruHpq68O5AOX1/Salon-Management-System?node-id=4-277&starting-point-node-id=4%3A50&scaling=scale-down&content-scaling=fixed&t=nlBK4h0pNuandAPz-1",
       linkLabel: "View Prototype",
       repo: "#",

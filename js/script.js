@@ -363,10 +363,6 @@ document.addEventListener("DOMContentLoaded", () => {
     stackEl.appendChild(grp);
   });
 
-  /* ---------- FOOTER ---------- */
-  document.getElementById("year").textContent = year;
-  document.getElementById("footerName").textContent = data.name;
-
   /* ---------- SCROLL REVEAL ---------- */
   const observer = new IntersectionObserver(
     (entries) => {
