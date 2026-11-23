@@ -23,6 +23,17 @@ const portfolioData = {
   /* ---------- WORK HISTORY ---------- */
   experience: [
     {
+      role: "Quality Analyst Intern",
+      company: "First DataCorp",
+      period: "September 2026 – October 2026",
+      description: "Ensured web application quality through manual and automated testing across a 200-hour internship, covering functional and regression testing, defect tracking, and end-to-end automation.",
+      bullets: [
+        "Ran functional and regression tests on web applications, creating and executing test cases covering core user flows, expected results, and edge cases to confirm features worked as expected after updates and fixes.",
+        "Identified and documented bugs with clear reproduction steps, expected vs. actual behavior, and supporting evidence; logged notable issues on Azure DevOps boards, verified fixes before sign-off, and maintained testing documentation and reports.",
+        "Wrote automated end-to-end test scripts with Playwright and TypeScript to cover repetitive regression scenarios and reduce manual testing effort.",
+      ],
+    },
+    {
       role: "Software Developer Intern",
       company: "Blue Aurora Solutions Inc.",
       period: "March 2026 – July 2026",
@@ -165,13 +176,14 @@ const portfolioData = {
   skills: ["Software Development", "Web Development", "Database Management", "Problem Solving", "Team Collaboration", "Communication", "Adaptability", "Time Management"],
 
   /* ---------- TOOLS ---------- */
-  tools: ["VS Code", "Figma", "Postman", "Github", "HeidiSQL","XAMPP","Herd", "Godot", "DBeaver"],
+  tools: ["VS Code", "Figma", "Postman", "Github", "Azure DevOps", "Playwright", "HeidiSQL","XAMPP","Herd", "Godot", "DBeaver"],
 
   /* ---------- STACK (grouped) ---------- */
   stack: [
     { category: "Programming Languages",  items: ["PHP","Java","JavaScript","HTML","CSS","SQL","GDScript"] },
     { category: "Frameworks & Databases", items: ["Laravel","MySQL","Database Management","Database Administration"] },
-    { category: "Tools & Platforms",      items: ["Git","GitHub","Postman","Swagger","API Testing","API Documentation","DBeaver","TestFlight","VS Code","XAMPP","Android Studio","Godot Engine","NetBeans","Figma"] },
+    { category: "Tools & Platforms",      items: ["Git","GitHub","Azure DevOps","Postman","Swagger","API Testing","API Documentation","DBeaver","TestFlight","VS Code","XAMPP","Android Studio","Godot Engine","NetBeans","Figma"] },
+    { category: "Quality Assurance & Testing", items: ["Playwright (TypeScript)","Test Automation","Manual Testing","Functional Testing","Regression Testing","Test Case Design","Bug Reporting & Tracking (Azure DevOps)","Fix Verification","Test Documentation","Web Application Testing"] },
     { category: "Concepts & Methods",     items: ["Full-Stack Development","SDLC","OOP","Debugging","Code Review","Agile Collaboration","UI/UX Design","System Troubleshooting"] },
     { category: "AI & Productivity Tools",items: ["GitHub Copilot","ChatGPT/Claude","Prompt Engineering","AI-Driven Debugging","Code Optimization","Workflow Automation"] },
   ],
